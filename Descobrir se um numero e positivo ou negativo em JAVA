@@ -1,0 +1,35 @@
+Heres another problem solved in Java
+
+Descubra se um numero e negativo, positivo ou netro em JAVA
+
+
+package treni;
+
+import java.util.Scanner;
+
+public class tre2 {
+
+	public static void main(String[] args) {
+		
+		Scanner leia = new Scanner(System.in);
+		
+		int num;
+
+	
+		System.out.println("Ola! Neste programa informaremos se o numero que digitou e positivo, negativo ou neutro!");
+		System.out.println("Digite um numero inteiro qualquer: ");
+		num = leia.nextInt();
+		
+		if (num > 0) {
+			System.out.println("O numero digitado: " + num + " e positivo!");
+		}
+		if (num == 0) {
+			System.out.println("O numero digitado e neutro!");
+		}
+		if (num < 0) {
+			System.out.println("O numero digitado: " + num + " e negativo!");
+		}
+		
+		leia.close();
+	}
+}
