@@ -1,0 +1,41 @@
+Heres a code of solving a problem in Java:
+Conversao de temperatura;
+
+import java.util.Scanner;
+
+public class efe {
+
+	public static void main(String[] args) {
+		
+		Scanner leia = new Scanner(System.in);
+		
+		double cel, kel, fah;
+		int converter;
+		
+		System.out.println("Ola, aqui vamos converter qualquer temperatura em celsius para fahrenheit ou kelvin!!");
+		System.out.println("Digite uma temperatura qualquer em celsius: ");
+		cel = leia.nextDouble();
+		System.out.println("Agora, escolha em qual quer converter: (1)Fahrenheit ou (2)Kelvin" );
+		converter = leia.nextInt();
+		
+		switch (converter) {
+		
+		case 1: fah = cel * 1.8 + 32;
+		System.out.println("A conversao para fahrenheit e: " + fah);
+		break;
+		
+		case 2: kel = cel + 237.15;
+		System.out.println("A conversao para kelvin e: " + kel);
+		break;
+		}
+		
+		System.out.println("Thats it ;]");
+		
+		
+
+		
+		
+		leia.close();
+	}
+
+}
