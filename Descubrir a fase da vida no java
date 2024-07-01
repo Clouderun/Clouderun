@@ -1,0 +1,36 @@
+Descubrir a fase da vida de acordo com a idade digitada
+(nao liguem pro nome do package e da classe)
+
+
+
+
+package testts;
+
+import java.util.Scanner;
+
+public class hello {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+
+		int idade;
+
+		System.out.println("Ola, digite sua idade e te diremos sua classificaçao: ");
+		idade = leia.nextInt();
+
+		if (idade >= 7 && idade <= 11) {
+			System.out.println("Sua idade e: " + idade + " sua classificaçao e : fase escolar");
+		} else if (idade >= 12 &&idade <= 18) {
+			System.out.println("Sua idade e: " + idade + " e sua classificaçao e : adolescencia");
+		} else if (idade >= 20 && idade <= 30) {
+			System.out.println("Sua idade e: " + idade + " e sua classificaçao e : jovem dulto");
+		} else if (idade >= 30 && idade <= 50) {
+			System.out.println("Sua idade e: " + idade + " e sua classificaçao e : adulto medio");
+		}
+
+		leia.close();
+
+	}
+
+}
