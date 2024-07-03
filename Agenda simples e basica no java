@@ -1,0 +1,34 @@
+//Armazenando nome e contato de telefone do usuario
+
+
+
+package treni;
+
+import java.util.Scanner;
+
+public class efe {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+
+		String nome;
+		String contato;
+		String resposta;
+
+		System.out.println("Escreva seu nome: ");
+		nome = leia.next();
+
+		do {
+			System.out.println("Ola, " + nome + ". Agora digite seu contato de telefone:  ");
+			contato = leia.next();
+			System.out.println("Este é seu contato?: " + contato + " Digite 'sim' para confirmar: ");
+			resposta = leia.next();
+		} while (resposta.equals("nao"));
+
+		System.out.println("Obrigado," + nome + ". Volte sempre! 😊");
+
+		leia.close();
+	}
+
+}
