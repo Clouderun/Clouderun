@@ -1,0 +1,60 @@
+//Calculadora de dois numeros em java
+
+
+
+
+
+package testts;
+
+import java.util.Scanner;
+
+public class hello {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+
+		System.out.println("Ola, esta e uma calculadora com os operadores aritmeticos basicos como +,-,*,/ ");
+
+		int num1, num2;
+		int resultado = 0;
+
+		System.out.println("Digite um numero: ");
+		num1 = leia.nextInt();
+		System.out.println("Digite um numero: ");
+		num2 = leia.nextInt();
+
+		System.out.println("Agora escolha sua operaçao: (1) adiçao+ (2)subtraçao- (3)multiplicaçao* (4)divisao/ ");
+		int operacao = leia.nextInt();
+
+		switch (operacao) {
+
+		case 1:
+			resultado = num1 + num2;
+			break;
+
+		case 2:
+			resultado = num1 - num2;
+			break;
+
+		case 3:
+			resultado = num1 * num2;
+			break;
+
+		case 4:
+			resultado = num1 / num2;
+			break;
+
+		default:
+			System.out.println("Operaçao invalida");
+			break;
+
+		}
+
+		System.out.println("O resultado da operaçao escolhida é: " + resultado);
+
+		leia.close();
+
+	}
+
+}
