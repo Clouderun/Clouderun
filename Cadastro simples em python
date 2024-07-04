@@ -1,0 +1,20 @@
+Cadastro em python
+
+
+print('Ola, neste programa voce ira realizar seu cadastro imaginario em python!(❁´◡`❁)')
+nomeUsuario = input('Primeiro, digite seu nome completo: ')
+idadeUsuario = int(input('Agora, digite sua idade: '))
+emailUsuario = input('Digite seu email: ')
+def cadastro():
+    nomeUsuario = input('Primeiro, digite seu nome completo: ')
+    idadeUsuario = int(input('Agora, digite sua idade: '))
+    emailUsuario = input('Digite seu email: ')
+
+print('As informaçoes recebidas foram: Nome: ', nomeUsuario,' Idade: ', idadeUsuario, ' Email: ', emailUsuario,)
+
+resposta =  input('Estas informaçoes estao corretas?')
+while resposta == 'nao':
+    cadastro()
+
+if resposta == 'sim':
+        print('Obrigado, seu cadatro foi um sucesso╰(*°▽°*)╯')
