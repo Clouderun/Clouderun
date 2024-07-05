@@ -1,0 +1,31 @@
+Loop escolhido por usuario em java
+
+
+package treni;
+
+import java.util.Scanner;
+
+public class tre2 {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+
+		int num;
+		int limite;
+		System.out.println(
+				"Ola, neste programa, iremos fazer um loop do numero digitado ate um limite dado pelo usuario!");
+		System.out.println("Por favor digite agora um numero em que quer que seu loop comece: ");
+		num = leia.nextInt();
+		System.out.println("Agora digte um limite para o loop em valores inteiros: ");
+		limite = leia.nextInt();
+
+		for (int i = num; i < limite; i++) {
+			System.out.println(i);
+		}
+
+		System.out.println("Yay☆*: .｡. o(≧▽≦)o .｡.:*☆, fim do loop!");
+
+		leia.close();
+	}
+}
