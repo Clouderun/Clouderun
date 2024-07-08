@@ -1,0 +1,105 @@
+Curiosidades sobre continentes com java
+[basic features]
+
+
+package treni;
+
+import java.util.Scanner;
+
+public class tre2 {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+
+		int continente;
+
+		System.out.println(
+				"Neste programa, vamos dizer curiosidades de acordo com o continente que o usuario digite! (●'◡'●) ");
+
+		System.out.println(
+				"Agora, responda, voce quer ouvir curiosidades de qual continente? (1)Africa (2)America (3)Asia (4)Antartida (5)Europa (6)Oceania ");
+		continente = leia.nextInt();
+
+		switch (continente) {
+
+		case 1:
+			System.out.println("Voce sabia que o rio mais longo do mundo está na África? Este é o rio Nilo!");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			int resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que a Africa é o lar do maior animal terrestre vivo? Pois é, o elefante africano! ");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		case 2:
+			System.out.println(
+					"Voce sabia que a America tem o predio mais alto do mundo? Se situa no chile com 62 andares?");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que no continente americano tem um pais que tem mais feriados no mundo? Sim, a Colombia!  ");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		case 3:
+			System.out.println("Voce sabia que a Asia tem 6 paises que sao considerados os mais populosos? ");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que é proibido mascar chiclete em publico em Cingapura? ");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		case 4:
+			System.out.println("Voce sabia que na Antartida a mineraçao é proibida?");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que lá há pouquissimas especies de animais?  ");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		case 5:
+			System.out.println("Voce sabia que a Europa possui 50 paises?");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que na Europa é que esta o menor pais do mundo, o Vaticano? ");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		case 6:
+			System.out.println("Voce sabia que a Oceania é o menor continenete do mundo?");
+			System.out.println("Quer saber mais outra curiosidade? Se sim digite 1 se nao digite 2: ");
+			resp = leia.nextInt();
+			if (resp == 1) {
+				System.out.println(
+						"Aqui vai mais uma curiosidade: Voce sabia que a Oceania é o ultimo continente a ser descoberto?");
+			} else if (resp == 2) {
+				System.out.println("Espero que tenha gostado da curiosidade!😊");
+			}
+			break;
+
+		}
+
+		System.out.println("Espero que tenha gostado este e o fim do programa!(●'◡'●)");
+
+		leia.close();
+	}
+}
