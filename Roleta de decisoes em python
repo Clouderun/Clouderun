@@ -1,0 +1,20 @@
+''Roleta'' de decisões em python
+Codigo feito por mim para aprender mais sobre a biblioteca random
+
+import random
+
+print('Ola, este programa ira te ajudar quando ficar indeciso ao tentar escolher entre opções!ヾ(≧▽≦*)o')
+print('Lembrando que só vale palavras!')
+
+opcao1 = input('Digite aqui a opção 1: ')
+opcao2 = input('Digite aqui a opção 2: ')
+opcao3 = input('Digite aqui a opção 3: ')
+ajudante = random.choice([opcao1, opcao2, opcao3])
+
+print('Estas são as opçoes, Opção 1: {} Opção 2: {} Opção 3: {}'.format(opcao1, opcao2, opcao3))
+
+escolha = ajudante
+print(escolha)
+print('A escolha foi: ', escolha)
+
+print('Ai esta uma escolha! Que tal?o(￣▽￣)ｄ, Espero que tenha gostado!')
