@@ -1,0 +1,20 @@
+Gerador de senhas aleatorias em python
+Seguindo o tutorial do freecodecamp!
+
+import random
+
+print('Bem vindo, Este é um gerador de senhas!')
+
+chars = 'ABCÇDEFGHIJKLMNOPQRSTUVWXYZabcçdefghijklmnopqrstuvwxyz0123456789'
+
+numeros = int(input('Coloque quantas senhas voce quer gerar: '))
+
+tamanho = int(input('Agora, escolha até quantos caracteres voce quer que sua senha tenha: '))
+
+print('Aqui estão as senhas geradas!(❁´◡`❁):')
+
+for sen in range(numeros):
+    senha = ''
+    for c in range(tamanho):
+        senha += random.choice(chars)
+    print(senha)
