@@ -1,0 +1,51 @@
+Jogo de pedra, papel e tesoura em java
+Assim como em python, utilizamos a biblioteca random. Este projeto, eu segui um pouco das instruçoes do youtuber e programador 'Coding with John'
+Porem, modifiquei e testei o codigo com oque eu achei melhor, então esta diferente do dele.
+
+
+
+
+package pedrapapeltesoura;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class ppt {
+
+	public static void main(String[] args) {
+
+		String[] ppt = { "pedra", "papel", "tesoura" };
+		String comput = ppt[new Random().nextInt(ppt.length)];
+		String jogador;
+		Scanner leia = new Scanner(System.in);
+
+		System.out.println("Olá! Bem vindo ao jogo de pedra, papel, tesoura em Javaヾ(•ω•`)o");
+		while (true) {
+			System.out.println("Agora, escolha sua jogada: 'pedra', 'papel' ou 'tesoura': ");
+			jogador = leia.nextLine();
+			if (jogador.equals("pedra") || jogador.equals("papel") || jogador.equals("tesoura")) {
+				break;
+			} else {
+				System.out.println(jogador + " é uma jogada invalida(′⌒`). Tente novamente.");
+			}
+		}
+		System.out.println("A joga do computador foi: " + comput);
+
+		if ((jogador.equals("pedra")) & comput.equals("papel") || (jogador.equals("papel")) & comput.equals("tesoura")
+				|| (jogador.equals("tesoura")) & comput.equals("pedra")) {
+			System.out.println("Voce perdeu o(TヘTo)..");
+		} else if ((jogador.equals("pedra")) & comput.equals("tesoura")
+				|| (jogador.equals("papel")) & comput.equals("pedra")
+				|| (jogador.equals("tesoura")) & comput.equals("papel")) {
+			System.out.println("Voce venceu!ヾ(≧▽≦*)o");
+		}
+		if (jogador.equals(comput)) {
+			System.out.println("Empate!");
+		}
+
+		System.out.println("Gostou do jogo? Espero que sim!♪(´▽｀)");
+
+		leia.close();
+
+	}
+}
