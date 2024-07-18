@@ -1,0 +1,57 @@
+Gerador de numeros da loteria!
+Seguindo o exemplo de 'Begin Conding Fast' na playlist 'Java Projects for Beginners'
+
+
+
+package loteria;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class loteria {
+
+	public static void main(String[] args) {
+
+		Random aleatorio = new Random();
+		int min = 1, max = 49, compart = 6;
+
+		int[] loteriaArray = new int[compart];
+		boolean nRepetido;
+		int randomNumber = 0;
+
+		System.out.println("Ola! Bem vindo ao jogo de Loteria!(o゜▽゜)o☆");
+		System.out.println("Aqui vamos dar o resultado da loteria com numeros aleatorios!");
+
+		// vamos fazer um contador e um loop para que nao haja numeros repetidos
+		for (int counter = 0; counter < compart; counter++) {
+			// se o numero repetido der false o loop acaba e volta pro counter;
+			do {
+				nRepetido = false;
+				// 1 ate 49
+				randomNumber = aleatorio.nextInt(max + 1 - min) + min;
+				// se o mesmo numero aparecer de novo, volta pra fazer o loop dnv:
+				for (int l = 0; l <= counter; l++) {
+					if (loteriaArray[l] == randomNumber) {
+						nRepetido = true;
+						break;
+					}
+				}
+
+			} while (nRepetido);
+			// se não ocorrer situaçao de numero repetido, colocamos os numeros
+			// dentro do vetor
+			loteriaArray[counter] = randomNumber;
+		}
+		// aqui fazemos os numeros que foram sortidos/sorteados
+		// fiquem ordenados no criterio de quem saiu primeiro
+		Arrays.sort(loteriaArray);
+		System.out.println("O resultado da loteria foi: ");
+		for (int i = 0; i < compart; i++) {
+			System.out.print(loteriaArray[i] + " ");
+		}
+
+		System.out.println("( •̀ ω •́ )✧");
+
+	}
+
+}
