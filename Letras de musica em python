@@ -1,0 +1,58 @@
+Letras de musica em python
+
+
+
+import time
+from time import sleep
+import sys
+
+#letra da msc You can do magic da banda America(゜▽゜*)♪
+def letras():
+    verso1 = ["You can do magic"]
+    verso2 = ["You can have anything that you desire"]
+    verso3 = ["Magic"]
+    verso4 = ["and you know"]
+    verso5 = ["You're the one who can put out the fire"]
+
+    delay1 = 0.8
+    delay2 = 0.16
+    delay3 = 0.10
+    delay4 = 0.10
+    delay5= 0.4
+
+    for line in verso1:
+        for i in line:
+            print(i, end='')
+            sleep(0.15)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso2:
+        for i in line:
+            print(i, end='')
+            sleep(0.13)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso3:
+        for i in line:
+            print(i, end='')
+            sleep(0.11)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso4:
+        for i in line:
+            print(i, end='')
+            sleep(0.11)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso5:
+        for i in line:
+            print(i, end='')
+            sleep(0.08)
+        time.sleep(delay1)
+        print('')
+
+letras()
