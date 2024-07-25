@@ -1,0 +1,24 @@
+Gerador de cores aleatórias em java.
+Pode não ser prático ja que precisa digitar as cores e armazenas no vetor, mas a biblioteca java.awt.Color não estava disponivel, então...
+(●'◡'●)Ainda sim é um bom projeto para praticar a biblioteca random
+
+
+package cores;
+
+import java.util.Random;
+
+public class gerador {
+
+	public static void main(String[] args) {
+
+		String cores[] = { "vermelho", "laranja", "amarelo", "verde", "azul", "roxo", "rosa", "azul escuro",
+				"verde escuro", "ciano", "magenta", "turquesa", "verde grama", "amarelo pastel", "roxo pastel", "lilas",
+				"violeta", "vermelho carmesim", "marrom", "preto", "branco" };
+		String random = cores[new Random().nextInt(cores.length)];
+
+		System.out.println("Ola! Este programa gera cores aleatorias para você(❁´◡`❁)");
+		System.out.println("Aqui esta uma cor aleatoria: " + random);
+
+	}
+
+}
