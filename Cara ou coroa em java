@@ -1,0 +1,38 @@
+Jogo de cara ou coroa em java
+
+
+package caraoucoroa;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class headortails {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+		String[] hot = { "cara", "coroa" };
+		String userescolha;
+		String moeda = hot[new Random().nextInt(hot.length)];
+
+		System.out.println("Olá, bem-vindo ao jogo de cara e coroa!");
+		while (true) {
+			System.out.println("Faça sua jogada, cara ou coroa?");
+			userescolha = leia.next();
+			if (moeda.equals(userescolha)) {
+				System.out.println("Você ganhou!");
+				System.out.println("A moeda caiu em: " + moeda);
+				System.out.println("Bem no que você escolheu! Parabéns!ヾ(≧▽≦*)o ");
+				break;
+			} else {
+				System.out.println("Você perdeu...");
+				System.out.println("A moeda caiu em: " + moeda);
+				System.out.println("Tente novamente..o(TヘTo)");
+				break;
+			}
+
+		}
+
+	}
+
+}
