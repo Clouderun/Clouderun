@@ -1,0 +1,15 @@
+import random
+
+def caraoucoroa():
+    UserEscolha = input("Escolha cara ou coroa: ")
+    moeda = random.choice(["cara", "coroa"])
+    if moeda == UserEscolha:
+        print('A moeda caiu em:', moeda, 'que foi oque você escolheu!( •̀ ω •́ )✧')
+        print('Parabéns!')
+    elif moeda != UserEscolha:
+        print('A moeda caiu em:', moeda, 'que foi oque você não escolheu(；′⌒`)')
+        print('Tente novamente...')
+
+
+print('Bem vindo ao jogo de cara ou coroa! Se cair no que você escolheu, você ganha. Se não, você perde!')
+print(caraoucoroa())
