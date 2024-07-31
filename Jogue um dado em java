@@ -1,0 +1,29 @@
+Jogue um dado em java!
+Utilizando a biblioteca random ;]
+
+package rolladice;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class dado {
+
+	public static void main(String[] args) {
+
+		int[] dado = { 1, 2, 3, 4, 5, 6 };
+		int roll = dado[new Random().nextInt(dado.length)];
+		String rolldice;
+
+		Scanner leia = new Scanner(System.in);
+
+		System.out.println("Bem vindo ao jogo de rolar um dado!");
+
+		System.out.println("Digite 'role' para rolar o dado: ");
+		rolldice = leia.next();
+		if (rolldice.equals("role")) {
+			System.out.println("E o número: " + roll);
+		}
+
+		System.out.println("E aí, gostou? rode o programa novamente e se divirta mais!(❁´◡`❁)");
+	}
+}
