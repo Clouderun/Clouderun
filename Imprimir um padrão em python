@@ -1,0 +1,7 @@
+Este programa imprime um padrão de * em python
+
+
+print('Ola, vamos tentar imprimir um padrao de *')
+triangle = range(4)
+for i in triangle:
+    print((i+1)*'*')
