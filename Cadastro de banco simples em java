@@ -1,0 +1,46 @@
+Cadastro de banco em java
+
+
+
+		String nome, email, senha, cpf;
+		int opçao;
+		double quantia;
+		float contavalor =0;
+		
+		
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Bem-vindo ao Banco do Java!");
+		System.out.println("Que tal fazer uma conta aqui? Vamos ao cadastro!");
+		System.out.println("Primeiro digite seu nome: ");
+		nome = leia.next();
+		System.out.println("Olá, " + nome + ". Agora digite seu email: ");
+		email = leia.next();
+		System.out.println("Digite sua senha: ");
+		senha = leia.next();
+		System.out.println("Ok, agora o ultimo passo para criar sua conta! Insira seu cpf: ");
+		cpf = leia.next();
+		
+		System.out.println("Ok! Conta criada, oque deseja fazer," + nome + "?  1.Depositar dinheiro\n 2.Sacar dinheiro\n 3.Pagar boleto\n");
+		opçao = leia.nextInt();
+		
+		if (opçao == 1) {
+			System.out.println("Qual a quantia que quer depositar?");
+			quantia = leia.nextDouble();
+			contavalor += quantia;
+			System.out.println("Agora sua conta recebeu o valor de: "+ quantia);
+		} else if (opçao == 2) {
+			System.out.println("Essa opção está inválida por agora...😓");
+		} else if (opçao == 3) {
+			System.out.println("Você não possui boleto a pagar ainda.");
+		}
+		
+		System.out.println("Seu cadastro foi um sucesso, "+ nome + ". Obrigado por abrir sua conta no nosso banco! Volte sempre!😊");
+		
+		leia.close();
+	}
+	
+	
+}
+
+
