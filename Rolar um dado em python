@@ -1,0 +1,11 @@
+Rolar um dado em python simples utilizando a biblioteca random
+
+import random
+
+def dado():
+    ato = input('Rolar dado? ')
+    rolladice = random.choice([1,2,3,4,5,6])
+    print(rolladice)
+
+print('Oi, neste programa vamos rolar um dado!ヾ(≧▽≦*)o, responda sim para a pergunta a seguir')
+dado()
