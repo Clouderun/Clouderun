@@ -1,0 +1,45 @@
+Calculadora simples de dois números em python
+
+print('Olá! Esta é uma calculadora de dois números sem interface!╰(￣ω￣ｏ)')
+
+def soma():
+    Answer1 = input('Você escolheu soma! Agora digite um numero: ')
+    Answer2 = input('Agora, digite outro numero qualquer: ')
+
+    calculoSoma = (int(Answer1) + int(Answer2))
+    print('A soma dos numeros digitados foram: '+ str(calculoSoma))
+
+def subtracao():
+    Answer1 = input('Você escolheu subtração! Agora digite um numero: ')
+    Answer2 = input('Agora, digite outro numero qualquer: ')
+
+    calculoSubtracao = (int(Answer1) - int(Answer2))
+    print('A subtração dos numeros digitados foram: ' + str(calculoSubtracao))
+
+
+def multi():
+    Answer1 = input('Você escolheu multiplicação! Agora digite um numero: ')
+    Answer2 = input('Agora, digite outro numero qualquer: ')
+
+    calculoMulti = (int(Answer1) * int(Answer2))
+    print('A multiplicação dos numeros digitados foram: ' + str(calculoMulti))
+
+def divisao():
+    Answer1 = input('Você escolheu divisão! Agora digite um numero: ')
+    Answer2 = input('Agora, digite outro numero qualquer: ')
+
+    calculoDivisao = (int(Answer1) / int(Answer2))
+    print('A divisão dos numeros digitados foram: ' + str(calculoDivisao))
+
+Userinput = input('Vamos começar! Escolha qual operação quer fazer na calculadora:'
+                  '\n 1]Soma \n 2]Subtração \n 3]Multiplicação \n 4]Divisão \n')
+if Userinput == '1':
+    soma()
+elif Userinput == '2':
+    subtracao()
+elif Userinput == '3':
+    multi()
+elif Userinput == '4':
+    divisao()
+
+print('Espero que tenha gostado da calculadora!o(*^▽^*)┛')
