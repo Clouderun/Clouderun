@@ -1,0 +1,15 @@
+Complete o alfabeto em python
+
+
+letras = ['a', 'b', 'c']
+alfabeto = 26
+print(letras)
+
+print('Olá, neste programa você irá completar o alfabeto, utilizando append e len para aprendizagem! Se divirta!ヾ(≧▽≦*)o')
+
+while len(letras) < alfabeto:
+    faltando = input('Olá, adicione as letras que estão faltando: ')
+    letras.append(faltando)
+    print(letras)
+
+print('E aí, gostou?( •̀ ω •́ )✧')
