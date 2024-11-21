@@ -1,0 +1,10 @@
+Neste codigo, testamos a função length no python.
+Fiz a algum tempo e resolvi postar agora.😅
+
+
+
+print('Ola!, vamos testar algumas coisas com len nesse programa!( •̀ ω •́ )✧')
+
+quantiPlv = input('Escreva uma palavra e te diremos quantas letras tem nela: ')
+
+print('A palavra digitada tem:',len(quantiPlv),'letras.')
