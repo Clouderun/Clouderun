@@ -1,0 +1,18 @@
+Lista de tarefas em python.
+
+print('Olá, tudo bem? Esta é uma lista de tarefas! Preencha-a')
+
+tarefa1 = input('Escreva sua primeira tarefa: ')
+print('Anotado!')
+tarefa2 = input('Escreva sua segunda tarefa: ')
+print('Anotado!')
+
+
+def showList():
+    print(tarefa1)
+    print(tarefa2)
+
+
+
+print('Mostrando lista:')
+showList()
