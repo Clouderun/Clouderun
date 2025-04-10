@@ -1,5 +1,5 @@
 # Olá, sou Emanuelle Bessa 💫⭐.
-## 💻| Estou cursando Engenharia de Software atualmente.
+## 💻|Minhas Tecnologias
 
 
 <div align="left">
