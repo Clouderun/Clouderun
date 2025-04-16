@@ -1,0 +1,48 @@
+// Bubble sort algoritmo em java na prática
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+
+		int[] numbers = new int[5];
+
+		System.out.println("Aleatório: ");
+		for (int i = 0; i < numbers.length; i++) {
+			// ficara gerando numeros aleatorios que são menores que o limite do vetor
+			// exemplo: o vetor tem 10 posiçoes, so vai gerar numeros de 0 a 9
+			// tambem quando colocamos um numero qualquer ao inves de um tamanho de vetor
+			// coloca-se int antes pois o math random é double
+			numbers[i] = (int) (Math.random() * numbers.length);
+			System.out.println(numbers[i]);
+		}
+
+		// cria-se esta variavel para podermos facilitar a troca de posições
+		int auxiliar;
+
+		// Agora para ordenar em estilo bubble sort
+		// works by repeatedly swapping
+		// problema: não eficiente com maior volume de dados, fica testando continuamente  gerando complexidade de codigo e uma performance n tão boa
+		
+		for (int i = 0; i < numbers.length; i++) {
+			// como j vai sempre ter que ir iterando logo depois do i é i + 1
+			for (int j = i + 1; j < numbers.length; j++) {
+				// se o numero que ta na posiçao i é maior que o que esta no j
+				// então precisamos passar ele para frente para ficar em ordem crescente.
+				// mas para isso precisamos de uma nova variavel, surgindo a 'auxiliar'
+				// pois ao tentar trocar o i e o j de lugar não poderiamos sem a auxiliar
+				if (numbers[i] > numbers[j]) {
+					auxiliar = numbers[j];
+					numbers[j] = numbers[i];
+					numbers[i] = auxiliar;
+				}
+			}
+		}
+		
+		System.out.println("Ordenado: ");
+		for(int i = 0; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
+		}
+		
+		
+	}
+}
