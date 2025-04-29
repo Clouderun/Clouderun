@@ -1,0 +1,85 @@
+package trabalhoPoo;
+
+import java.util.Scanner;
+
+public class Simulacao {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a distancia maxima: ");
+
+        int distanciaMax = scanner.nextInt();
+
+        if (distanciaMax <= 0) {
+            System.out.println("Erro: A distancia maxima deve ser um numero positivo maior que zero.");
+            return;
+        }
+
+        Carros carroUm = new Carros("Carro 1");
+        Carros carroDois = new Carros("Carro 2");
+
+        Carros.espacamento();
+        carroUm.mostrar();
+        carroDois.mostrar();
+        Carros.espacamento();
+
+        while (carroUm.getDistancia() < distanciaMax && carroDois.getDistancia() < distanciaMax) {
+            carroUm.correr();
+            carroDois.correr();
+            Carros.espacamento();
+            carroUm.mostrar();
+            carroDois.mostrar();
+            Carros.espacamento();
+        }
+
+        if (carroUm.getDistancia() >= distanciaMax && carroUm.getDistancia() > carroDois.getDistancia()) {
+            System.out.println(carroUm.getNome() + " venceu.");
+        } else if (carroDois.getDistancia() >= distanciaMax && carroDois.getDistancia() > carroUm.getDistancia()) {
+            System.out.println(carroDois.getNome() + " venceu.");
+        } else {
+            System.out.println("A corrida terminou em empate.");
+        }
+    }
+}
+
+
+package trabalhoPoo;
+
+import java.util.Random;
+
+public class Carros {
+
+    private int distancia;
+    private final String nome;
+
+    public Carros(String nome) {
+        this.distancia = 0;
+        this.nome = nome;
+    }
+
+    public void correr() {
+        Random random = new Random();
+        int percorre = random.nextInt(3) + 1;
+        this.distancia += percorre;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public int getDistancia() {
+        return this.distancia;
+    }
+
+    public static void espacamento() {
+        System.out.println("--------------------------------------------------------------");
+    }
+
+    public void mostrar() {
+        for (int i = 0; i < this.getDistancia(); i++) {
+            System.out.print(" ");
+        }
+        System.out.println("#");
+    }
+}
