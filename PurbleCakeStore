@@ -1,0 +1,134 @@
+//Este projeto foi inspirado no jogo de bolo do Purble Place!
+
+		
+		Scanner leia = new Scanner(System.in);
+		
+		String[] forma = {"heart","circle","square"};
+		String[] batter = {"chocolate","vanilla","red-velvet"};
+		String[] decorations = {"sprinkles","m&m's","frosting"};
+		
+		String chooseForma;
+		String chooseBatter;
+		String chooseDeco;
+		
+		String[] finalcake = new String[3];
+		
+		Boolean certoounao= false;
+		
+		System.out.println("Welcome to our Purble Store!🫓🎂");
+		
+		System.out.println("Here you can make your own cake! Let me show you:");
+		System.out.println("First, lets see the options for our cake:");
+		
+		System.out.println("---------------◯□❤️form◯□❤️:---------------");
+		for (int i = 0; i< forma.length;i++) {
+			System.out.println(forma[i]);
+		}
+		System.out.println("---------------🟡🟤🔴batter🟡🟤🔴:---------------");
+		for (int i = 0; i< batter.length;i++) {
+			System.out.println(batter[i]);
+		}
+		System.out.println("---------------🍩🍪🧁decorations🍩🍪🧁:---------------");
+		for (int i = 0; i< decorations.length;i++) {
+			System.out.println(decorations[i]);
+		}
+		
+		System.out.println("ο(=•ω＜=)ρ⌒☆Now its time to make your own choices and bake your very own cake!");
+		
+		System.out.println("Insert what form you want: ");
+		chooseForma = leia.next();
+		
+		
+		for (int i = 0; i< forma.length; i++) {
+			if (chooseForma.equalsIgnoreCase(forma[i])) {
+				System.out.println(chooseForma + " chosen");
+				certoounao = true;
+				break;
+			}
+		}
+
+		if(certoounao == false) {
+			System.out.println("Invalido");
+			System.out.println("Digite novamente: ");
+			chooseForma = leia.next();
+			for (int i = 0; i< forma.length; i++) {
+				if (chooseForma.equalsIgnoreCase(forma[i])) {
+					System.out.println(chooseForma + " chosen");
+					certoounao = true;
+					break;
+				}
+			}
+		}
+		
+		finalcake[0]= chooseForma;
+		
+		certoounao = false;
+		
+		System.out.println("Insert what batter you want: ");
+		chooseBatter = leia.next();
+		for (int i = 0; i< batter.length; i++) {
+			if (chooseBatter.equalsIgnoreCase(batter[i])) {
+				System.out.println(chooseBatter + " chosen");
+				certoounao = true;
+				break;
+			}
+		}
+
+		if(certoounao == false) {
+			System.out.println("Invalido");
+			System.out.println("Digite novamente: ");
+			chooseBatter = leia.next();
+			for (int i = 0; i< batter.length; i++) {
+				if (chooseBatter.equalsIgnoreCase(batter[i])) {
+					System.out.println(chooseBatter + " chosen");
+					certoounao = true;
+					break;
+				}
+			}
+		}
+		
+		finalcake[1]= chooseBatter;
+		
+		certoounao = false;
+		
+		System.out.println("Insert what decoration you want: ");
+		chooseDeco = leia.next();
+		for (int i = 0; i< decorations.length; i++) {
+			if (chooseDeco.equalsIgnoreCase(decorations[i])) {
+				System.out.println(chooseDeco + " chosen");
+				certoounao = true;
+				break;
+			}
+		}
+
+		if(certoounao == false) {
+			System.out.println("Invalido");
+			System.out.println("Digite novamente: ");
+			chooseDeco = leia.next();
+			for (int i = 0; i< decorations.length; i++) {
+				if (chooseDeco.equalsIgnoreCase(decorations[i])) {
+					System.out.println(chooseDeco + " chosen");
+					certoounao = true;
+					break;
+				}
+			}
+		}
+		finalcake[2]= chooseDeco;
+	
+		System.out.println("------------------------------");
+		
+		for(int i=0;i< finalcake.length;i++) {
+			System.out.println(finalcake[i]);
+		}
+		System.out.println("Este é o seu bolo criado? y/n");
+		String answer = leia.next();
+		
+		if(answer.equalsIgnoreCase("y")) {
+			System.out.println("Yay! Congrats on making your own cake🍰");
+		} else {
+			System.out.println("...");
+		}
+		
+	}
+
+}
