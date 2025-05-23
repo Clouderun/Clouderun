@@ -1,0 +1,10 @@
+texto = input('Escreva um texto e te direi quantas palavras tem nele: ')
+
+palavras = texto.split()
+
+print('Existem ' + str(len(palavras)) + ' palavra(s) presente(s) no texto escrito')
+
+print('Agora organizarei em ordem alfabética as palavras do seu texto: ')
+palavras.sort()
+print(palavras)
+
