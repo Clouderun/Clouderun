@@ -1,0 +1,86 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class blabla {
+
+	public static void main(String[] args) {
+		
+		JFrame janela = new JFrame();
+		
+		
+		// JANELA 1 SETTING:
+		
+		JLabel texto1 = new JLabel("Hey Soulja Boy, can I get your autograph?");
+		texto1.setBounds(120, 20, 300, 80);
+		
+		// botao e seus settings
+		JButton button = new JButton("Ya Trick Ya");
+		button.setBounds(190, 90, 100, 40);
+		// aqui criamos um evento de clique colocando uma classe dentro 
+		// passando um obj dentro desse metodo
+		button.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame janela2 = new JFrame();
+				
+				// JANELA 2 SETTINGS:
+				janela2.setTitle("Music");
+				//janela2.setForeground(new java.awt.Color(255,13,143));
+				
+				JLabel texto2 = new JLabel("Yo, Arab, I really like you, man");
+				texto2.setBounds(150, 20, 300, 80);
+				
+				
+				JButton button2 = new JButton("Ya Trick Ya");
+				button2.setBounds(190, 90, 100, 40);
+				button2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("BLABLABLA");
+					}
+				});
+				
+				
+				janela2.add(texto2);
+				
+				janela2.add(button2);
+				
+				
+				janela2.setLayout(null);
+				
+				janela2.setBounds(500,300, 500, 200);
+				janela2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				janela2.setVisible(true);
+
+				
+			}
+			
+		});
+		
+		// add o texto
+		janela.add(texto1);
+		// para adicionar componentes na janela:
+		janela.add(button);
+		// definimos o layout como null para podermos definir os tamanhos e posiçoes de componentes dentro da janela, como o button
+		janela.setLayout(null);
+		
+		
+		janela.setTitle("Music");
+		// definir tamanho da janela
+		janela.setBounds(500,300, 500, 200);
+		// para encerrar o programa quando apertar o X
+		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// para fazer a janela aparecer 
+		janela.setVisible(true);
+		
+		
+		
+		
+
+	}
+
+}
