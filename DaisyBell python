@@ -1,0 +1,76 @@
+import time
+from time import sleep
+import sys
+
+
+#Daisy Bell(゜▽゜*)♪
+# os delays e sleeps ajudam para conometrar e atrasar a saída das letras.
+# dentro de um def, organizamos trechos/versos da msc em arrays e os delays que vamos usar ou testar.
+# então fazemos um for para cada verso, definindo sua conometragem e tempo de saida
+# depois fora da funçao, a chamamos no fim para imprimir os resultados
+
+def letras():
+    verso1 = ["         Daisy, Daisy       "]
+    verso2 = [" give me your answer do  "]
+    verso3 = [" I'm half crazy, all for the love of you "]
+    verso4 = [" It won't be a stylish marriage "]
+    verso5 = [" I can't afford a carriage "]
+    verso6 = [" But you'll look sweet upon the seat "]
+    verso7 = [" Of a bicycle built for two.     "]
+
+    delay1 = 0.8
+    delay11 = 0.9
+    delay2 = 0.16
+    delay3= 0.7
+
+
+    for line in verso1:
+        for i in line:
+            print(i, end='')
+            sleep(0.17)
+        time.sleep(delay11)
+        print('')
+
+    for line in verso2:
+        for i in line:
+            print(i, end='')
+            sleep(0.11)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso3:
+        for i in line:
+            print(i, end='')
+            sleep(0.15)
+        time.sleep(delay11)
+        print('')
+
+    for line in verso4:
+        for i in line:
+            print(i, end='')
+            sleep(0.11)
+        time.sleep(delay11)
+        print('')
+
+    for line in verso5:
+        for i in line:
+            print(i, end='')
+            sleep(0.08)
+        time.sleep(delay1)
+        print('')
+
+    for line in verso6:
+        for i in line:
+            print(i, end='')
+            sleep(0.14)
+        time.sleep(delay11)
+        print('')
+
+    for line in verso7:
+        for i in line:
+            print(i, end='')
+            sleep(0.08)
+        time.sleep(delay1)
+        print('')
+
+letras()
